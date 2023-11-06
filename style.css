@@ -1,0 +1,172 @@
+body {
+  background-color: #333;
+}
+
+
+.titulo-elige-un-color {
+  border-radius: 50px;
+  color: white;
+  list-style: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.58em;
+  font-weight: 600;
+  padding: 10px 20px;
+  /* Ajusta el padding para controlar el ancho del borde */
+  border: 2px solid var(--navbar-borde-elige-un-color-opcion);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 30px var(--box-shadow-color);
+}
+
+#titulo-elige-un-color {
+  margin: 20px;
+}
+
+.dropdown-menu {
+  border-radius: 25px;
+  box-shadow: 5px 5px 30px var(--box-shadow-color);
+}
+
+:root {
+  --navbar-borde-elige-un-color-opcion: rgba(255, 229, 0, 1);
+}
+
+.fondo-titulo-elige-un-color ul {
+  background-color: rgba(46, 46, 46, 1);
+  border: solid 2px;
+  border-color: rgba(255, 229, 0, 1);
+  border-color: var(--navbar-borde-elige-un-color-opcion);
+  padding: 10px 8px 10px 10px;
+}
+
+.color-option {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+/* probando un fondo para cada boton **************************************************************/
+.color-option:hover{
+  /* box-shadow: 0 0 10px var(--box-shadow-color); */
+  box-shadow: 0 0 20px rgb(148, 148, 148);
+}
+
+.fondo-opcion-colores {
+  border: none;
+  display: block;
+  width: 100%;
+  padding: 0px 10px 0px 10px;
+  clear: both;
+  background-color: transparent;
+}
+
+.redes {
+  margin-top: 3em;
+  display: flex;
+  justify-content: center;
+}
+
+.redes ul {
+  display: inline-flex;
+}
+
+.redes ul li a {
+  padding-left: 0px;
+  position: relative;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 63px;
+  background: #333;
+  border-radius: 50%;
+  font-size: 30px;
+  color: #ffe600;
+  transition: .5s;
+}
+
+:root {
+  --box-shadow-color: #ffe600;
+  --background-color: #ffe600;
+}
+
+.redes ul li a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: var(--background-color, );
+  transition: .5s;
+  transform: scale(.9);
+  z-index: -1;
+}
+
+.redes ul li a:hover::before {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px var(--box-shadow-color, );
+}
+
+.redes ul li a:hover {
+  color: var(--background-color, );
+  box-shadow: 0 0 5px var(--box-shadow-color, );
+  text-shadow: 0 0 5px var(--text-shadow-color, );
+}
+
+.spinner.spinner1 {
+  margin: 2.6em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner {
+  background: #eeeeee17;
+  border-radius: 50%;
+  height: 100px;
+  position: relative;
+  width: 100px;
+}
+
+.spinner::after {
+  border-radius: 50%;
+  content: '';
+  height: 100px;
+  width: 100px;
+  pointer-events: none;
+  animation: spin 3s linear infinite;
+  border: 3px solid transparent;
+  border-top-color: #ffde22;
+  position: absolute;
+  /* Agrega esta línea para deshabilitar interacciones del puntero */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* COLOR PARA EL JAVASCRIP */
+.spinner.spinner1.color1::after {
+  border-top-color: #ffde22;
+}
+
+.spinner.spinner1.color2::after {
+  border-top-color: #ff0000;
+}
+
+.spinner.spinner1.color3::after {
+  border-top-color: #0000ff;
+}
+
+.spinner.spinner1.color4::after {
+  border-top-color: #008000;
+}
+
+.spinner.spinner1.color5::after {
+  border-top-color: #00ffdd;
+}
